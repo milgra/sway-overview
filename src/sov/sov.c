@@ -363,8 +363,8 @@ int main(int argc, char** argv)
 	{"columns", optional_argument, NULL, 'c'},
 	{"anchor", optional_argument, NULL, 'a'},
 	{"margin", optional_argument, NULL, 'm'},
-	{"ratio", optional_argument, NULL, 's'},
-	{"timeout", optional_argument, NULL, 'r'},
+	{"ratio", optional_argument, NULL, 'r'},
+	{"timeout", optional_argument, NULL, 't'},
 	{"holdkey", optional_argument, NULL, 'k'}};
 
     while ((c = getopt_long(argc, argv, "vhno:r:s:a:m:t:c:k:", long_options, &option_index)) != -1)
