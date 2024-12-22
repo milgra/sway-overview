@@ -354,36 +354,39 @@ void ku_draw_border(ku_bitmap_t* bitmap, int x, int y, int w, int h, int r, floa
 	    c1); // right bottom
     }
 
+	float e_x = e;
+	float e_y = r > 0 ? e : 0;
+
     ku_draw_rect(
 	bitmap,
 	x,
-	y + e + r,
-	e,
-	h - 2 * e - 2 * r,
+	y + e_y + r,
+	e_x,
+	h - 2 * e_y - 2 * r,
 	c1,
 	0); // left vertical grad
     ku_draw_rect(
 	bitmap,
-	x + w - e,
-	y + e + r,
-	e,
-	h - 2 * e - 2 * r,
+	x + w - e_x,
+	y + e_y + r,
+	e_x,
+	h - 2 * e_y - 2 * r,
 	c1,
 	0); // right vertical grad
     ku_draw_rect(
 	bitmap,
-	x + e + r,
+	x + e_x + r,
 	y,
-	w - 2 * e - 2 * r,
-	e,
+	w - 2 * e_x - 2 * r,
+	e_x,
 	c1,
 	0); // top horizontal grad
     ku_draw_rect(
 	bitmap,
-	x + e + r,
-	y + h - e,
-	w - 2 * e - 2 * r,
-	e,
+	x + e_x + r,
+	y + h - e_x,
+	w - 2 * e_x - 2 * r,
+	e_x,
 	c1,
 	0); // bottom horizontal grad
 }
